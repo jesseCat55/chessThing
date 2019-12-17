@@ -12,7 +12,7 @@ local timeFromPrevFrame = 0
 local pressedKey = ""
 local movementSpeed = 5
 local prevKeyPressed = ""
-local board = require('board')
+local board = require('./lib/board')
 
 function love.load()
   board.load()
