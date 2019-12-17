@@ -13,8 +13,11 @@ local movementSpeed = 5
 local prevKeyPressed = ""
 
 function love.load()
+  print('loading ... ')
   love.graphics.setColor(0, 0, 0, 255)
   love.graphics.setBackgroundColor(0, 0, 0)
+  print('Done loading.')
+
 end
 
 function love.draw()
