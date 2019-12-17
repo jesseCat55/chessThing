@@ -11,13 +11,10 @@ local timeFromPrevFrame = 0
 local pressedKey = ""
 local movementSpeed = 5
 local prevKeyPressed = ""
+local board = require('myBoard')
 
 function love.load()
-  print('loading ... ')
-  love.graphics.setColor(0, 0, 0, 255)
-  love.graphics.setBackgroundColor(0, 0, 0)
-  print('Done loading.')
-
+  board.load()
 end
 
 function love.draw()
