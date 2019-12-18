@@ -1,1 +1,26 @@
--- TO be defined
+local Class = {}
+Class.__index = Class
+
+function Class:new() end
+
+function Class:derive(type)
+    local cls = {}
+    cls['__call'] = Class.__call
+    cls.type = type
+    cls.__index = cls
+    cls.super = self
+    setmetatable(cls, self)
+    retun cls
+end
+
+function Class:__call(...)
+    local inst = setmetatable({}, self)
+    ins:new(...)
+    return inst
+end
+
+function Class:get_type()
+    return self.type
+end
+
+return Class

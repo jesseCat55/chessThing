@@ -1,4 +1,5 @@
-local board =  {}
+local class = require('class')
+local Board = class:derive('Board')
 
 local screenH = love.graphics.getHeight()
 local screenW = love.graphics.getWidth()
@@ -6,14 +7,16 @@ local smallerCube = math.min(screenH, screenW)
 local maxTilesInScreen = 10
 local tileSize = math.floor(smallerCube/maxTilesInScreen)
 
-function board.load()
-    love.graphics.setColor(0, 0, 0, 255)
-    love.graphics.setBackgroundColor(0, 0, 0)
+function Board:new()
+  love.graphics.setColor(0, 0, 0, 255)
+  love.graphics.setBackgroundColor(0, 0, 0)
 end
 
+function Board:update(dt)
+end
 
-function board.draw()
-    local mode = 1
+function Board:draw()
+  local mode = 1
     local theMode
     -- 1, maxTilesInScreen - 2 -> create an offset of 1 tile size from (0,0)
     for i =1, maxTilesInScreen - 2, 1 do
@@ -28,6 +31,6 @@ function board.draw()
       end
       mode = 1 - mode
     end
-  end
+end
 
-return board
+return Board

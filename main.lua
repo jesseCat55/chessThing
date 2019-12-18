@@ -12,14 +12,15 @@ local timeFromPrevFrame = 0
 local pressedKey = ""
 local movementSpeed = 5
 local prevKeyPressed = ""
-local board = require('./lib/board')
+
+local myBoard = Board()
 
 function love.load()
-  board.load()
+  myBoard.load()
 end
 
 function love.draw()
-  board.draw()
+  myBoard.draw()
   drawPlayer(xPos, yPos)
 end
 
