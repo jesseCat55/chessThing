@@ -15,7 +15,7 @@ local pressedKey = ""
 local movementSpeed = 5
 local prevKeyPressed = ""
 
-local myBoard = Board()
+local myBoard = Board(maxTilesInScreen, tileSize)
 
 function love.load()
 end
