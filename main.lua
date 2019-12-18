@@ -1,5 +1,7 @@
 
 
+local Board = require("./lib/Board")
+
 local screenH = love.graphics.getHeight()
 local screenW = love.graphics.getWidth()
 local smallerCube = math.min(screenH, screenW)
