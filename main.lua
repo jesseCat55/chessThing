@@ -21,7 +21,7 @@ function love.load()
 end
 
 function love.draw()
-  myBoard.draw()
+  myBoard:draw()
   drawPlayer(xPos, yPos)
 end
 
