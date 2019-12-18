@@ -18,7 +18,6 @@ local prevKeyPressed = ""
 local myBoard = Board()
 
 function love.load()
-  myBoard.load()
 end
 
 function love.draw()

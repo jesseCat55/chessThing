@@ -1,4 +1,4 @@
-local class = require('class')
+local class = require('./lib/Class')
 local Board = class:derive('Board')
 
 local screenH = love.graphics.getHeight()

@@ -10,12 +10,12 @@ function Class:derive(type)
     cls.__index = cls
     cls.super = self
     setmetatable(cls, self)
-    retun cls
+    return cls
 end
 
 function Class:__call(...)
     local inst = setmetatable({}, self)
-    ins:new(...)
+    inst:new(...)
     return inst
 end
 
